@@ -1,0 +1,267 @@
+﻿<Page
+    x:Class="文件格式转换工厂.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:文件格式转换工厂"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    
+    <Page.Resources>
+        <Style x:Key="ButtonStyle1" TargetType="Button">
+            <Setter Property="Background" Value="LightPink"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderBrush" Value="{ThemeResource ButtonBorderBrush}"/>
+            <Setter Property="BorderThickness" Value="{ThemeResource ButtonBorderThemeThickness}"/>
+            <Setter Property="Padding" Value="8,4,8,4"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="FontFamily" Value="{ThemeResource ContentControlThemeFontFamily}"/>
+            <Setter Property="FontWeight" Value="Normal"/>
+            <Setter Property="FontSize" Value="{ThemeResource ControlContentThemeFontSize}"/>
+            <Setter Property="FocusVisualMargin" Value="-3"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid x:Name="RootGrid" Background="{TemplateBinding Background}" CornerRadius="6">
+
+                            <ContentPresenter x:Name="ContentPresenter" AutomationProperties.AccessibilityView="Raw" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentTransitions="{TemplateBinding ContentTransitions}" HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" Padding="{TemplateBinding Padding}" VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal">
+                                        <Storyboard>
+                                            <PointerUpThemeAnimation Storyboard.TargetName="RootGrid"/>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="PointerOver">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RootGrid" Storyboard.TargetProperty="Background">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ButtonBackgroundPointerOver}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter" Storyboard.TargetProperty="BorderBrush">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ButtonBorderBrushPointerOver}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter" Storyboard.TargetProperty="Foreground">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ButtonForegroundPointerOver}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <PointerUpThemeAnimation Storyboard.TargetName="RootGrid"/>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Pressed">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RootGrid" Storyboard.TargetProperty="Background">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ButtonBackgroundPressed}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter" Storyboard.TargetProperty="BorderBrush">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ButtonBorderBrushPressed}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter" Storyboard.TargetProperty="Foreground">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ButtonForegroundPressed}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <PointerDownThemeAnimation Storyboard.TargetName="RootGrid"/>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Disabled">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RootGrid" Storyboard.TargetProperty="Background">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ButtonBackgroundDisabled}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter" Storyboard.TargetProperty="BorderBrush">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ButtonBorderBrushDisabled}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter" Storyboard.TargetProperty="Foreground">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ButtonForegroundDisabled}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+
+    <ScrollViewer>
+        <Grid>
+            <Grid.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="SkyBlue" Offset="0"/>
+                    <GradientStop Color="LightBlue" Offset="0.5"/>
+                    <GradientStop Color="SkyBlue" Offset="1"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Button Name="SettingBtn" Content="&#xE115;" FontFamily="Segoe MDL2 Assets" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="20" Click="SettingBtn_Click"/>
+            <Grid Margin="20,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock x:Uid="主页1" Text="视频/音频 转换" HorizontalAlignment="Center" Grid.Row="0" Grid.ColumnSpan="2" FontSize="22" Margin="0,20,0,0"/>
+                <Button x:Uid="主页5" Style="{StaticResource ButtonStyle1}" Name="SelectFile" Content="选择一个文件" VerticalAlignment="Top" Grid.Row="1" Click="SelectFile_Click" Margin="0,20,0,0"/>
+                <TextBlock Name="FilePath" Grid.Row="1" TextWrapping="Wrap" Margin="0,60,0,0"/>
+                <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="1">
+                    <ComboBox x:Uid="主页6" Name="ConvertTo" Header="目标格式" BorderBrush="LightSkyBlue" Foreground="LightSkyBlue" SelectionChanged="ConvertTo_SelectionChanged"/>
+                    <Button x:Uid="主页7" Style="{StaticResource ButtonStyle1}" Name="SaveFileBtn" Content="选择保存位置" VerticalAlignment="Top" Margin="20,20,0,0" Click="SaveFileBtn_Click"/>
+                </StackPanel>
+                <TextBlock Name="FilePath2" Margin="0,60,0,0"  Grid.Row="1" Grid.Column="1" TextWrapping="Wrap"/>
+                <StackPanel Orientation="Horizontal" Grid.Row="2" Margin="0,20,0,0">
+                    <ComboBox x:Uid="主页9"  Name="FileQuat" Header="选择质量" BorderBrush="LightSkyBlue" Foreground="LightSkyBlue"/>
+                    <ListBox Margin="10" SelectionMode="Multiple" Height="50" VerticalAlignment="Top">
+                        <ListBoxItem x:Uid="主页20" Name="VideoEdit" Content="快速视频处理" Height="50"/>
+                    </ListBox>
+                </StackPanel>
+                <Button x:Uid="主页10" Style="{StaticResource ButtonStyle1}" Name="StartBtn" Content="开始转换"  Grid.Row="2" Grid.Column="1" VerticalAlignment="Top" Margin="0,20,0,0" FontSize="26" Click="StartBtn_Click"/>
+                <StackPanel Visibility="{Binding ElementName=VideoEdit,Path=IsSelected}" Grid.Row="3">
+                    <TextBlock x:Uid="主页2" Text="以下选项如果勾选，程序才会使用其中的值处理视频" TextWrapping="Wrap"/>
+                    <CheckBox x:Uid="主页34" Name="CB4" Content="视频转换处理算法" Margin="0,10,0,0"/>
+                    <StackPanel Orientation="Horizontal" Visibility="{Binding ElementName=CB4,Path=IsChecked}">
+                        <ComboBox Name="VideoAlg">
+                            <ComboBoxItem x:Uid="主页35" Content="性能/速度/存储空间 优先"/>
+                            <ComboBoxItem x:Uid="主页36" Content="质量优先于性能"/>
+                        </ComboBox>
+                    </StackPanel>
+                    <CheckBox x:Uid="主页25" Name="CB1" Content="视频输出尺寸 以像素为单位" Margin="0,20,0,0"/>
+                    <StackPanel Orientation="Horizontal" Visibility="{Binding ElementName=CB1,Path=IsChecked}">
+                        <TextBox Name="VideoWidth" Header="Width"/>
+                        <TextBox Name="VideoHeight" Header="Height" Margin="10,0,0,0"/>
+                    </StackPanel>
+                    <CheckBox x:Uid="主页26" Name="CB2" Content="镜像旋转" Margin="0,20,0,0"/>
+                    <StackPanel Orientation="Horizontal" Visibility="{Binding ElementName=CB2,Path=IsChecked}">
+                        <ComboBox x:Uid="主页27" Name="MirrorMode" Header="镜像旋转模式">
+                            <ComboBoxItem x:Uid="主页28" Content="水平镜像旋转"/>
+                            <ComboBoxItem x:Uid="主页29" Content="垂直镜像旋转"/>
+                            <ComboBoxItem x:Uid="主页30" Content="不旋转 (默认)"/>
+                        </ComboBox>
+                    </StackPanel>
+                    <CheckBox x:Uid="主页31" Name="CB3" Content="在视频中画一个矩形,只获取矩形里的视频" Margin="0,20,0,0"/>
+                    <StackPanel Orientation="Horizontal" Visibility="{Binding ElementName=CB3,Path=IsChecked}">
+                        <TextBox x:Uid="主页32" Name="DrawXCoord" Header="x坐标"/>
+                        <TextBox x:Uid="主页33" Name="DrawYCoord" Header="y坐标" Margin="10,0,0,0"/>
+                        <TextBox Name="DrawWidth" Header="Width" Margin="10,0,0,0"/>
+                        <TextBox Name="DrawHeight" Header="Height" Margin="10,0,0,0"/>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Visibility="{Binding ElementName=VideoEdit,Path=IsSelected}" Grid.Row="3" Grid.Column="1">
+                    <CheckBox x:Uid="主页43" Name="CB6" Content="设定一种颜色，用来填充视频中的空白帧"/>
+                    <StackPanel Orientation="Horizontal" Visibility="{Binding ElementName=CB6,Path=IsChecked}">
+                        <TextBox Name="CA" Header="A"/>
+                        <TextBox Name="CR" Header="R" Margin="10,0,0,0"/>
+                        <TextBox Name="CG" Header="G" Margin="10,0,0,0"/>
+                        <TextBox Name="CCB" Header="B" Margin="10,0,0,0"/>
+                    </StackPanel>
+                    <CheckBox x:Uid="主页44" Name="CB7" Content="对视频进行旋转 (顺时针)" Margin="0,20,0,0"/>
+                    <StackPanel Orientation="Horizontal" Visibility="{Binding ElementName=CB7,Path=IsChecked}">
+                        <ComboBox Name="VideoRotation">
+                            <ComboBoxItem x:Uid="主页45" Content="旋转180度"/>
+                            <ComboBoxItem x:Uid="主页46" Content="旋转270度"/>
+                            <ComboBoxItem x:Uid="主页47" Content="旋转90度"/>
+                            <ComboBoxItem x:Uid="主页48" Content="不旋转 (默认)"/>
+                        </ComboBox>
+                    </StackPanel>
+                    <CheckBox x:Uid="主页37" Name="CB5" Content="球面投影属性" Margin="0,20,0,0"/>
+                    <StackPanel Orientation="Horizontal" Visibility="{Binding ElementName=CB5,Path=IsChecked}">
+                        <ComboBox Name="QMEffect">
+                            <ComboBoxItem x:Uid="主页38" Content="未使用球面投影 (默认)"/>
+                            <ComboBoxItem x:Uid="主页39" Name="UseQM" Content="使用了球面投影"/>
+                        </ComboBox>
+                        <ComboBox Name="QMMode" IsEnabled="{Binding ElementName=UseQM,Path=IsSelected}" Margin="10,0,0,0">
+                            <ComboBoxItem x:Uid="主页40" Content="Equirectangular 格式"/>
+                            <ComboBoxItem x:Uid="主页41" Content="不使用球面投影格式 (默认)"/>
+                            <ComboBoxItem x:Uid="主页42" Content="使用不支持的投影格式"/>
+                        </ComboBox>
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel Grid.Row="4" Grid.ColumnSpan="2" Margin="0,20,0,0">
+                    <TextBlock Name="ConvertSucc" Text="&#xE0E7;" FontFamily="Segoe MDL2 Assets" Foreground="Green" FontSize="24" Visibility="Collapsed"/>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding ElementName=ConvertProcess,Path=Value}"/>
+                        <TextBlock Text=" %"/>
+                    </StackPanel>
+                    <ProgressBar Name="ConvertProcess" ValueChanged="ConvertProcess_ValueChanged"/>
+                    <TextBlock x:Uid="主页11" Text="请注意执行转换可能会导致占用较高的CPU和RAM." TextWrapping="Wrap" Margin="0,10,0,0"/>
+                    <TextBlock x:Uid="主页12" Text="请勿尝试将低质量的视频转换成高质量的,这会导致转换失败。部分视频格式不支持互相转换。" TextWrapping="Wrap"/>
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Row="1" Margin="20,40,20,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock x:Uid="主页13" Text="图片转换" HorizontalAlignment="Center" FontSize="22" Grid.ColumnSpan="2"/>
+                <StackPanel Orientation="Horizontal" Grid.Row="1">
+                    <Button x:Uid="主页14" Style="{StaticResource ButtonStyle1}" Name="SelectIMG" Content="选择图片" Click="SelectIMG_Click"/>
+                    <TextBlock Name="IMGPath" TextWrapping="Wrap" Margin="10,30,0,0"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="1">
+                    <ComboBox x:Uid="主页15" Name="IMGConvertTo" Header="选择格式" BorderBrush="LightSkyBlue" Foreground="LightSkyBlue">
+                        <ComboBoxItem Content="PNG"/>
+                        <ComboBoxItem Content="BMP"/>
+                        <ComboBoxItem Content="JPEG"/>
+                        <ComboBoxItem Content="JPEG-XR"/>
+                        <ComboBoxItem Content="Tiff"/>
+                    </ComboBox>
+                    <Button x:Uid="主页16" Style="{StaticResource ButtonStyle1}" Name="SaveIMGBtn" Content="选择保存位置" Click="SaveIMGBtn_Click" Margin="10,0,0,0"/>
+                </StackPanel>
+                <TextBlock Name="IMGPath2" Grid.Row="1" Grid.Column="1" TextWrapping="Wrap" Margin="0,60,0,0"/>
+                <StackPanel Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Left">
+                    <CheckBox x:Uid="主页21" Name="UseWebIMG" Content="下载并转换网络图片" Click="UseWebIMG_Click"/>
+                    <TextBox Name="IMGURL" Width="400" PlaceholderText="Image URL" TextWrapping="Wrap" Margin="0,10,0,0" Visibility="{Binding ElementName=UseWebIMG,Path=IsChecked}"/>
+                </StackPanel>
+                <StackPanel Grid.Row="3" Grid.ColumnSpan="2" Margin="0,10,0,0">
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Uid="主页18" Style="{StaticResource ButtonStyle1}" Name="IMGStartBtn" Content="开始转换" Click="IMGStartBtn_Click"/>
+                        <TextBlock Name="IMGSucc" Text="&#xE0E7;" FontFamily="Segoe MDL2 Assets" Foreground="Green" FontSize="24" VerticalAlignment="Center" Margin="10,0,0,0" Visibility="Collapsed"/>
+                    </StackPanel>
+
+                    <TextBlock x:Uid="主页17" Text="该功能可以将图片转换为其他的图片格式." Margin="0,20,0,0"/>
+                </StackPanel>
+            </Grid>
+
+
+            <ContentDialog Name="SettingDialog" PrimaryButtonText="确定" PrimaryButtonClick="SettingDialog_PrimaryButtonClick">
+                <StackPanel Margin="20">
+                    <ComboBox Name="LanguageCtrl" Header="语言(Language)" Margin="0,20,0,0">
+                        <ComboBoxItem Content="系统默认语言(System Default Language)" IsSelected="True"/>
+                        <ComboBoxItem Content="简体中文"/>
+                        <ComboBoxItem Content="繁體中文"/>
+                        <ComboBoxItem Content="English"/>
+                        <ComboBoxItem Content="Русский"/>
+                    </ComboBox>
+                    <Button x:Uid="SettingTrans1"  Name="SaveLang" Content="应用" Click="SaveLang_Click" Margin="0,10,0,0"/>
+                    <StackPanel Name="RestartPanel" Margin="0,10,0,0" Visibility="Collapsed">
+                        <TextBlock x:Uid="SettingTrans2"  Text="需要重启应用更改才能生效." Foreground="Red"/>
+                        <TextBlock x:Uid="SettingTrans3"  Name="RestartErr" Text="抱歉,您的系统或设备不支持直接重启,请自行关闭应用再打开." TextWrapping="Wrap" Foreground="Red" Visibility="Collapsed" Margin="0,10,0,0"/>
+                        <StackPanel Orientation="Horizontal">
+                            <Button x:Uid="SettingTrans4"  Name="RestartBtn" Content="点击重启" Margin="0,10,0,0" Click="RestartBtn_Click"/>
+                            <ProgressRing Name="LangRing" Height="20" Width="20" Foreground="Black" Margin="10,0,0,0"/>
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>
+            </ContentDialog>
+        </Grid>
+    </ScrollViewer>
+</Page>
