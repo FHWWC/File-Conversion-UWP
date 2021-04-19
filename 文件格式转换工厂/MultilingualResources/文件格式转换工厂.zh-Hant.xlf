@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="zh-Hans" target-language="zh-Hant" original="文件格式转换工厂/STRINGS/ZH-HANS/RESOURCES.RESW" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.6900.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="文件格式转换工厂/STRINGS/ZH-HANS/RESOURCES.RESW" datatype="resx">
+        <trans-unit id="主页1.Text" translate="yes" xml:space="preserve">
+          <source>视频/音频 转换</source>
+          <target state="new">视频/音频 转换</target>
+        </trans-unit>
+        <trans-unit id="主页10.Content" translate="yes" xml:space="preserve">
+          <source>开始转换</source>
+          <target state="new">开始转换</target>
+        </trans-unit>
+        <trans-unit id="主页11.Text" translate="yes" xml:space="preserve">
+          <source>请勿尝试将低质量视频转换为高质量视频，这将会导致视频占用大量磁盘空间和RAM，可能会导致您的电脑磁盘不足或者内存不足而崩溃.</source>
+          <target state="new">请勿尝试将低质量视频转换为高质量视频，这将会导致视频占用大量磁盘空间和RAM，可能会导致您的电脑磁盘不足或者内存不足而崩溃.</target>
+        </trans-unit>
+        <trans-unit id="主页12.Text" translate="yes" xml:space="preserve">
+          <source>有部分特殊格式无法转换,请勿尝试转换.否则可能会导致转换失败或应用崩溃.</source>
+          <target state="new">有部分特殊格式无法转换,请勿尝试转换.否则可能会导致转换失败或应用崩溃.</target>
+        </trans-unit>
+        <trans-unit id="主页13.Text" translate="yes" xml:space="preserve">
+          <source>图片 转换/识别</source>
+          <target state="new">图片 转换/识别</target>
+        </trans-unit>
+        <trans-unit id="主页14.Content" translate="yes" xml:space="preserve">
+          <source>选择图片</source>
+          <target state="new">选择图片</target>
+        </trans-unit>
+        <trans-unit id="主页15.Header" translate="yes" xml:space="preserve">
+          <source>选择格式</source>
+          <target state="new">选择格式</target>
+        </trans-unit>
+        <trans-unit id="主页16.Content" translate="yes" xml:space="preserve">
+          <source>选择保存位置</source>
+          <target state="new">选择保存位置</target>
+        </trans-unit>
+        <trans-unit id="主页17.Text" translate="yes" xml:space="preserve">
+          <source>该功能可以将视频/图片 转换为其他的图片格式.</source>
+          <target state="new">该功能可以将视频/图片 转换为其他的图片格式.</target>
+        </trans-unit>
+        <trans-unit id="主页18.Text" translate="yes" xml:space="preserve">
+          <source>转换的文件名不能与源文件名相同</source>
+          <target state="new">转换的文件名不能与源文件名相同</target>
+        </trans-unit>
+        <trans-unit id="主页19.Text" translate="yes" xml:space="preserve">
+          <source>选择的图片/图片保存位置/文件格式 不能为空/不存在!</source>
+          <target state="new">选择的图片/图片保存位置/文件格式 不能为空/不存在!</target>
+        </trans-unit>
+        <trans-unit id="主页2.Header" translate="yes" xml:space="preserve">
+          <source>选择类型</source>
+          <target state="new">选择类型</target>
+        </trans-unit>
+        <trans-unit id="主页3.Content" translate="yes" xml:space="preserve">
+          <source>视频转换</source>
+          <target state="new">视频转换</target>
+        </trans-unit>
+        <trans-unit id="主页4.Content" translate="yes" xml:space="preserve">
+          <source>音频转换</source>
+          <target state="new">音频转换</target>
+        </trans-unit>
+        <trans-unit id="主页5.Content" translate="yes" xml:space="preserve">
+          <source>选择转换文件</source>
+          <target state="new">选择转换文件</target>
+        </trans-unit>
+        <trans-unit id="主页6.Header" translate="yes" xml:space="preserve">
+          <source>要转换的格式</source>
+          <target state="new">要转换的格式</target>
+        </trans-unit>
+        <trans-unit id="主页7.Content" translate="yes" xml:space="preserve">
+          <source>选择保存位置</source>
+          <target state="new">选择保存位置</target>
+        </trans-unit>
+        <trans-unit id="主页8.Text" translate="yes" xml:space="preserve">
+          <source>选择的文件/保存位置 不能为空/不存在!</source>
+          <target state="new">选择的文件/保存位置 不能为空/不存在!</target>
+        </trans-unit>
+        <trans-unit id="主页9.Header" translate="yes" xml:space="preserve">
+          <source>选择质量</source>
+          <target state="new">选择质量</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

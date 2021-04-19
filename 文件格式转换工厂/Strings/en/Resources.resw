@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="SettingTrans1.Content" xml:space="preserve">
+    <value>Apply</value>
+  </data>
+  <data name="SettingTrans2.Text" xml:space="preserve">
+    <value>You need to restart application changes to take effect.</value>
+  </data>
+  <data name="SettingTrans3.Text" xml:space="preserve">
+    <value>Sorry,You can't restart application, Please close and open this application again,You need update your system at least build 14393.</value>
+  </data>
+  <data name="SettingTrans4.Content" xml:space="preserve">
+    <value>Click Restart</value>
+  </data>
+  <data name="主页1.Text" xml:space="preserve">
+    <value>Change Video/Audio FileType</value>
+  </data>
+  <data name="主页10.Content" xml:space="preserve">
+    <value>Start Conversion</value>
+  </data>
+  <data name="主页11.Text" xml:space="preserve">
+    <value>Please note doing this conversion maybe using high CPU and RAM.</value>
+  </data>
+  <data name="主页12.Text" xml:space="preserve">
+    <value>Don't try to convert low-quality videos to high-quality ones, this will cause conversion to fail. Some filetype cannot be converted, please don't try convert it.</value>
+  </data>
+  <data name="主页13.Text" xml:space="preserve">
+    <value>Image conversion</value>
+  </data>
+  <data name="主页14.Content" xml:space="preserve">
+    <value>Select an image</value>
+  </data>
+  <data name="主页15.Header" xml:space="preserve">
+    <value>Convert To</value>
+  </data>
+  <data name="主页16.Content" xml:space="preserve">
+    <value>Save to</value>
+  </data>
+  <data name="主页17.Text" xml:space="preserve">
+    <value>This function can conversion image to other image filetype.</value>
+  </data>
+  <data name="主页18.Content" xml:space="preserve">
+    <value>Start Conversion</value>
+  </data>
+  <data name="主页2.Text" xml:space="preserve">
+    <value>If box is checked , app will use entered value to process file.</value>
+  </data>
+  <data name="主页20.Content" xml:space="preserve">
+    <value>More video options</value>
+  </data>
+  <data name="主页21.Content" xml:space="preserve">
+    <value>Conversion Internet image</value>
+  </data>
+  <data name="主页25.Content" xml:space="preserve">
+    <value>Sets the output size of the video, in pixels</value>
+  </data>
+  <data name="主页26.Content" xml:space="preserve">
+    <value>Sets the direction in which the video will be mirrored</value>
+  </data>
+  <data name="主页27.Header" xml:space="preserve">
+    <value>Media Mirroring Options</value>
+  </data>
+  <data name="主页28.Content" xml:space="preserve">
+    <value>Mirror horizontally</value>
+  </data>
+  <data name="主页29.Content" xml:space="preserve">
+    <value>Mirror vertically</value>
+  </data>
+  <data name="主页30.Content" xml:space="preserve">
+    <value>No mirroring (default)</value>
+  </data>
+  <data name="主页31.Content" xml:space="preserve">
+    <value>Sets the rectangle within which the video will be cropped, specified in pixels</value>
+  </data>
+  <data name="主页32.Header" xml:space="preserve">
+    <value>x-coordinate</value>
+  </data>
+  <data name="主页33.Header" xml:space="preserve">
+    <value>y-coordinate</value>
+  </data>
+  <data name="主页34.Content" xml:space="preserve">
+    <value>Sets the media processing algorithm that is used for the video transform</value>
+  </data>
+  <data name="主页35.Content" xml:space="preserve">
+    <value>Performance over prefers quality</value>
+  </data>
+  <data name="主页36.Content" xml:space="preserve">
+    <value>Prefers quality over performance</value>
+  </data>
+  <data name="主页37.Content" xml:space="preserve">
+    <value>Spherical projection parameters</value>
+  </data>
+  <data name="主页38.Content" xml:space="preserve">
+    <value>Not use (default)</value>
+  </data>
+  <data name="主页39.Content" xml:space="preserve">
+    <value>Used</value>
+  </data>
+  <data name="主页40.Content" xml:space="preserve">
+    <value>Used equirectangular format for spherical video</value>
+  </data>
+  <data name="主页41.Content" xml:space="preserve">
+    <value>Does not use a spherical video format</value>
+  </data>
+  <data name="主页42.Content" xml:space="preserve">
+    <value>Used an unsupported spherical video format</value>
+  </data>
+  <data name="主页43.Content" xml:space="preserve">
+    <value>Sets the color that will be used to fill pixels in the frame that are not filled with video</value>
+  </data>
+  <data name="主页44.Content" xml:space="preserve">
+    <value>Sets the angle and direction in which the video will be rotated</value>
+  </data>
+  <data name="主页45.Content" xml:space="preserve">
+    <value>Rotate 180 degrees</value>
+  </data>
+  <data name="主页46.Content" xml:space="preserve">
+    <value>Rotate 270 degrees</value>
+  </data>
+  <data name="主页47.Content" xml:space="preserve">
+    <value>Rotate 90 degrees</value>
+  </data>
+  <data name="主页48.Content" xml:space="preserve">
+    <value>No rotation (default)</value>
+  </data>
+  <data name="主页5.Content" xml:space="preserve">
+    <value>Select a file</value>
+  </data>
+  <data name="主页6.Header" xml:space="preserve">
+    <value>Convert To a Filetype</value>
+  </data>
+  <data name="主页7.Content" xml:space="preserve">
+    <value>Save to</value>
+  </data>
+  <data name="主页9.Header" xml:space="preserve">
+    <value>Quality</value>
+  </data>
+</root>
